@@ -6,9 +6,6 @@ import { CodeModule } from './code/code.module';
 import { ChatModule } from './chat/chat.module';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
-import { ServeStaticModule } from '@nestjs/serve-static';
-import { join } from 'path';
-import { BookModule } from './book/book.module';
 
 @Module({
   imports: [
@@ -21,11 +18,6 @@ import { BookModule } from './book/book.module';
     UserModule,
     CodeModule,
     ChatModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-      serveRoot: '/pdfs', // Access PDFs via /pdfs/book1.pdf
-    }),
-    BookModule
   ],
 
   providers: [

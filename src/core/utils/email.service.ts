@@ -38,6 +38,7 @@ export class EmailService {
 
             await this.mailersend.email.send(emailParams);
         } catch (error) {
+            console.log(error);
             throw error;
         }
     }

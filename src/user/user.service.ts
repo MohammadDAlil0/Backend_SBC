@@ -65,7 +65,7 @@ export class UserService {
     });
 
     const resetToken = await this.getToken(user.id, user.email);
-    const resetUrl = `${this.configService.get('FRONTEND_URL')}/reset-password?token=${resetToken}`;
+    const resetUrl = `${this.configService.getOrThrow('FRONTEND_URL')}/auth/reset-password?token=${resetToken}`;
 
     await this.emailService.sendMail({
       to: email,

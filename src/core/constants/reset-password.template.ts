@@ -30,7 +30,7 @@ export function getPasswordResetTemplate(name: string, resetUrl: string): string
           <p>The link will expire in 1 hour.</p>
           
           <div class="footer">
-            <p>Best regards,<br>Your App Team</p>
+            <p>Best regards,<br>SBC Team</p>
           </div>
         </div>
       </body>
